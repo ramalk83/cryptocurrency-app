@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './src/components/AddVendor/Home'
-import VendorsList from './src/components/VendorsList'
+import React,{Component} from 'react';
+import {  View } from 'react-native';
+import Header from './src/components/Header'
+import CryptoContainer from './src/components/CryptoContainer'
+import {Provider} from 'react-redux';
+import store from './src/store'
+
 
 export default class App extends Component {
-  render(){
-    // return <Home />
-    return <VendorsList />
+  render (){
+    return (
+      <Provider store={store}>
+      <View >
+    <Header/>
+    <CryptoContainer/>
+      
+    </View>
+    </Provider>
+    );
   }
 }
-

@@ -1,0 +1,1 @@
+export const apiBaseUrl='https://coinmarketcap.com/api/';
